@@ -1,0 +1,15 @@
+WaitNext(1); App.Next(False);
+
+Start(TxtBox, L.Chara, R.Chara); SetPath(L.Chara, TestPersonRed); SetPath(R.Chara, TestPerson); Change(L.Chara, Normal);WaitNext(1.5); App.Next(False);
+
+Negative(L.Chara); Dialog(やあ！); Font.Size(80); App.Next(True);
+
+Switch.ActNeg(); Change(L.Chara, Smile); Dialog(久しぶり！); Font.Size(); WaitNext(2.2);App.Next(False);
+
+Switch.ActNeg(); Change(L.Chara, Normal); Change(R.Chara, Smile); Font.Size(50); Dialog(I_like_banana!!); App.Next(True);
+
+Switch.ActNeg(); Change(R.Chara, Normal); Dialog(ん？？); Font.Size();
+
+End(TxtBox, L.Chara, R.Chara, TalkText); WaitNext(1);
+
+End(This);

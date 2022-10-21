@@ -1,0 +1,21 @@
+WaitNext(1);
+__
+Start(TxtBox); SetPath(L.Chara, TestPersonRed); SetPath(R.Chara, TestPerson); Next();
+__
+Start(L.Chara); Start(R.Chara); WaitNext(1.5); App.Next(OFF);
+__
+L.Chara(OFF); Dialog(やあ！); App.Next(ON);
+__
+L.Chara(ON); R.Chara(OFF); Change(L.CHARA, Smile); Dialog(久しぶり！); WaitNext(2.2); App.Next(OFF);
+__
+L.Chara(OFF); R.Chara(ON); Change(L.Chara, Normal); Change(R.Chara, Smile); FontSize(38); Dialog(I like banana!!); App.Next(ON);
+__
+L.CHARA# ON; R.CHARA# OFF; CHANGE# R.CHARA$ Normal; DIALOG# ん？？;
+__
+END# TXTBOX; NEXT();
+__
+END# L.CHARA; END# R.CHARA; NEXT();
+__
+END# TALKTEXT; WAITNEXT# 1;
+__
+END# THIS;
